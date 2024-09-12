@@ -58,7 +58,7 @@
             width: 150px;
             height: 150px;
             box-shadow: 0 0 10px rgba(0, 170, 255, 0.8); /* Neon effect */
-            animation: neonGlow 5s linear infinite;
+            animation: neonBorder 5s linear infinite;
         }
         .image-container img {
             width: 100%;
@@ -76,9 +76,13 @@
             100% { text-shadow: 0 0 15px #ff00ff; }
         }
         @keyframes neonBorder {
-            0% { border-color: #00aaff; }
-            50% { border-color: #ff00ff; }
-            100% { border-color: #00aaff; }
+            0% { border-color: #ff0000; }
+            16% { border-color: #ff7f00; }
+            32% { border-color: #ffff00; }
+            48% { border-color: #7fff00; }
+            64% { border-color: #00ffff; }
+            80% { border-color: #0000ff; }
+            100% { border-color: #ff00ff; }
         }
         @keyframes float {
             0% { transform: translateY(0); }
