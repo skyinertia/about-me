@@ -53,12 +53,13 @@
         }
         .image-container {
             border: 5px solid;
-            border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ffff, #0000ff, #ff00ff);
-            border-image-slice: 1;
             border-radius: 10px;
             padding: 5px;
             width: 150px;
             height: 150px;
+            border-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+            border-image-slice: 1;
+            animation: rainbowBorder 5s linear infinite;
         }
         .image-container img {
             width: 100%;
@@ -67,13 +68,17 @@
             border-radius: 10px;
         }
         @keyframes rainbowGlow {
-            0% { text-shadow: 0 0 15px #ff0000; }
-            16% { text-shadow: 0 0 15px #ff7f00; }
-            32% { text-shadow: 0 0 15px #ffff00; }
-            48% { text-shadow: 0 0 15px #7fff00; }
-            64% { text-shadow: 0 0 15px #00ffff; }
-            80% { text-shadow: 0 0 15px #0000ff; }
-            100% { text-shadow: 0 0 15px #ff00ff; }
+            0% { text-shadow: 0 0 15px red; }
+            16% { text-shadow: 0 0 15px orange; }
+            32% { text-shadow: 0 0 15px yellow; }
+            48% { text-shadow: 0 0 15px green; }
+            64% { text-shadow: 0 0 15px cyan; }
+            80% { text-shadow: 0 0 15px blue; }
+            100% { text-shadow: 0 0 15px violet; }
+        }
+        @keyframes rainbowBorder {
+            0% { border-image-source: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet); }
+            100% { border-image-source: linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red); }
         }
         @keyframes float {
             0% { transform: translateY(0); }
