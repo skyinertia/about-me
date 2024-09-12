@@ -57,7 +57,7 @@
             padding: 5px;
             width: 150px;
             height: 150px;
-            box-shadow: 0 0 10px neonBorder; /* Neon effect */
+            box-shadow: neonBorderGlow 5s linear infinite; /* Neon effect */
             animation: neonBorder 5s linear infinite;
         }
         .image-container img {
@@ -74,6 +74,15 @@
             64% { text-shadow: 0 0 15px #00ffff; }
             80% { text-shadow: 0 0 15px #0000ff; }
             100% { text-shadow: 0 0 15px #ff00ff; }
+        }
+        @keyframes neonBorderGlow {
+            0% { box-shadow: 0 0 10px #ff0000; }
+            16% { box-shadow: 0 0 10px #ff7f00; }
+            32% { box-shadow: 0 0 10px #ffff00; }
+            48% { box-shadow: 0 0 10px #7fff00; }
+            64% { box-shadow: 0 0 10px #00ffff; }
+            80% { box-shadow: 0 0 10px #0000ff; }
+            100% { box-shadow: 0 0 10px #ff00ff; }
         }
         @keyframes neonBorder {
             0% { border-color: #ff0000; }
