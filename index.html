@@ -46,14 +46,23 @@
             opacity: 0;
             transition: opacity 2s ease;
             animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            gap: 20px; /* Space between image and text */
         }
         .image-container {
             border: 5px solid #00aaff;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 5px;
-            margin-left: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 15px #ff0000; }
@@ -93,7 +102,12 @@
 
     <div id="particles-js" class="background-particles"></div>
     <div class="spinner"></div>
-    <h1>Hello, World! <img src="https://i.ibb.co/47zBg8k/sample-image.png" alt="Cool Image" class="image-container"></h1>
+    <h1>
+        <div class="image-container">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+        </div>
+        Hi, I'm Sp0-oky!
+    </h1>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
