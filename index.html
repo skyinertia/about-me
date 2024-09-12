@@ -45,21 +45,20 @@
             text-shadow: 0 0 15px #ff0000;
             opacity: 0;
             transition: opacity 2s ease;
-            animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
+            animation: neonGlow 5s linear infinite, float 3s ease-in-out infinite;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 20px; /* Space between image and text */
         }
         .image-container {
-            border: 5px solid;
+            border: 5px solid #00aaff; /* Initial border color */
             border-radius: 10px;
             padding: 5px;
             width: 150px;
             height: 150px;
-            border-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
-            border-image-slice: 1;
-            animation: rainbowBorder 5s linear infinite;
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.8); /* Neon effect */
+            animation: neonBorder 5s linear infinite;
         }
         .image-container img {
             width: 100%;
@@ -67,7 +66,7 @@
             object-fit: cover;
             border-radius: 10px;
         }
-        @keyframes rainbowGlow {
+        @keyframes neonGlow {
             0% { text-shadow: 0 0 15px red; }
             16% { text-shadow: 0 0 15px orange; }
             32% { text-shadow: 0 0 15px yellow; }
@@ -76,9 +75,10 @@
             80% { text-shadow: 0 0 15px blue; }
             100% { text-shadow: 0 0 15px violet; }
         }
-        @keyframes rainbowBorder {
-            0% { border-image-source: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet); }
-            100% { border-image-source: linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red); }
+        @keyframes neonBorder {
+            0% { border-color: #00aaff; }
+            50% { border-color: #ff00ff; }
+            100% { border-color: #00aaff; }
         }
         @keyframes float {
             0% { transform: translateY(0); }
